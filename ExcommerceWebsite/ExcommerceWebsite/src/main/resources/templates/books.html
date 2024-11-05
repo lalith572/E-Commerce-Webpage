@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boxicon Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="/signed">
+                <img src="/assets/logo without bg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                E-Commerce Shopkaroo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="/signed">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="/mobiles">Mobiles</a></li>
+                            <li><a class="dropdown-item" href="/dresses">Dresses</a></li>
+                            <li><a class="dropdown-item" href="/laptops">Laptops</a></li>
+                            <li><a class="dropdown-item" href="/books">Books</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/signed">More items</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/orders" tabindex="-1" aria-disabled="true">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href="#">Cart</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='bx bx-user-circle bx-sm'></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+                            <li><a class="dropdown-item" href="/home">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="container-fluid">
+                    <div class="input-group">
+                        <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+                        <input type="text" class="form-control" placeholder="Search for Products, Fashion and more" aria-label="Username" aria-describedby="basic-addon1">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- main section -->
+<main>
+
+    <!-- cart offcanvas -->
+    <div class="cart" id="cart">
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><i class='bx bx-cart bx-flip-horizontal'></i>Your Cart</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul id="cart-items" class="list-group mb-3"></ul>
+                <p>Total: ₹<span id="cart-total">0.00</span></p>
+                <a class="btn btn-dark text-white" href="#" tabindex="-1" aria-disabled="true">Place Order</a>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 class="m-2 p-4">Top Deals On Books</h3>
+    <!-- product card -->
+    <div class="container p-2">
+        <div class="row g-4">
+            <!-- card starts -->
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/eb1.png" class="card-img-top pt-3 pb-3" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">Vedantu JEE Advanced Rank Accelerator </h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹1,499</p>
+                        <a href="/eb1" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/eb2.png" class="card-img-top pt-1 pb-1" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">Basic Computer Engineering Book</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <p class="card-text">₹193</p>
+                        <a href="/eb2" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/eb3.png" class="card-img-top pt-2 pb-2" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">Pharmaceutical Engineering Book</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹310</p>
+                        <a href="/eb3" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/eb4.png" class="card-img-top pt-1 pb-1" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">RRB JE Civil Engineering Book </h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹420  </p>
+                        <a href="/eb4" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/eb5.png" class="card-img-top " alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">W Vocational Award Engineering</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹2,471</p>
+                        <a href="/eb5" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/fb1.png" class="card-img-top" alt="..." height="360px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Boy with a Broken Heart</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹133 </p>
+                        <a href="/fb1" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/fb2.png" class="card-img-top pt-3 pb-3" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Name of the Wind</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹559</p>
+                        <a href="/fb2" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/fb3.png" class="card-img-top pt-3 pb-3" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">The Girl and the Ghost</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹360  </p>
+                        <a href="/fb3" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/fb4.png" class="card-img-top pt-3 pb-3" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">Dune</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹345</p>
+                        <a href="/fb4" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem; height: 30rem;">
+                    <img src="/assets/books/fb5.png" class="card-img-top pt-3 pb-3" alt="..." height="380px">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter 1-3 Box Set: A Magical Adventure Begins</h5>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <p class="card-text">₹428</p>
+                        <a href="/fb5" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- card ends -->
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center m-4">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+</main>
+
+<!-- footer section -->
+<footer class="bd-footer py-5 mt-5 bg-light">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 mb-3">
+                <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="E-Commerce">
+                    <span class="fs-5">E-Commerce Shopkaroo</span>
+                </a>
+                <ul class="list-unstyled small text-muted">
+                    <li class="mb-2">Designed and built with all the love in the world by the E-Commerce Shopkaroo team with the help of our contributors.</li>
+                </ul>
+                <br>
+                <br>
+                <h5>Payment Partners</h5>
+                <div class="col">
+                    <img width="50" height="50" src="https://img.icons8.com/color/50/paytm.png" alt="paytm">
+                    <img width="50" height="50" src="https://img.icons8.com/fluency/50/paypal.png" alt="paypal">
+                    <img width="50" height="50" src="https://img.icons8.com/color/50/mastercard-logo.png" alt="mastercard-logo">
+                    <img width="50" height="50" src="https://img.icons8.com/color/50/google-pay.png" alt="google-pay">
+                </div>
+            </div>
+            <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+                <h5>ABOUT</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Contact Us</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">About Us</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Careers</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Corporate</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Information</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>HELP</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Payments</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Shipping</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Cancellation & Returns</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">FQA</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Report</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Infringement</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>CONSUMER POLICY</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Privacy</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Term Of Use</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Cancellation & Returns</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Security</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Grievance</a></li>
+                    <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Redressal</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-lg-2 mb-3">
+                <h5>ADDRESS</h5>
+                <p><b>Street:</b>  Sri Ganesa Complex,n, 10th Street, Gandhipuram
+                    <br><b> City:</b>   Coimbatore
+                    <br><b> State/province/area:</b>    Tamil Nadu
+                    <br><b>Phone number:</b>  04222489095
+                    <br><b> Zip code:</b>  641012
+                    <br><b> Country calling code:</b>  +91 1234567891
+                    <br><b> Country:</b>  India</p>
+            </div>
+        </div>
+    </div>
+    <p class="cp">@2024 | All Right Reserved.</p>
+</footer>
+
+<!-- JS Script Links -->
+<!-- Bootstrap CDN Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- Boxicon Link -->
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+<!-- Custom JS -->
+<script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinix Y2 series Intel Core i3 11th Gen 1115G4</title>
+    <!-- CSS Links -->
+    <!-- Bootstrap CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boxicon Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- header section -->
+  <header class="header" id="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid">
+              <a class="navbar-brand text-white" href="/signed">
+                  <img src="/assets/logo without bg.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                  E-Commerce Shopkaroo
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item">
+                          <a class="nav-link active text-white" aria-current="page" href="/signed">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Categories
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
+                              <li><a class="dropdown-item" href="/mobiles">Mobiles</a></li>
+                              <li><a class="dropdown-item" href="/dresses">Dresses</a></li>
+                              <li><a class="dropdown-item" href="/laptops">Laptops</a></li>
+                              <li><a class="dropdown-item" href="/books">Books</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="/signed">More items</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white" href="/orders" tabindex="-1" aria-disabled="true">Orders</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link text-white" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" href="#">Cart</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class='bx bx-user-circle bx-sm'></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarScrollingDropdown">
+                              <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+                              <li><a class="dropdown-item" href="/home">Logout</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <form class="container-fluid">
+                      <div class="input-group">
+                          <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+                          <input type="text" class="form-control" placeholder="Search for Products, Fashion and more" aria-label="Username" aria-describedby="basic-addon1">
+                          <button class="btn btn-outline-light" type="submit">Search</button>
+                      </div>
+                  </form>
+
+              </div>
+          </div>
+      </nav>
+  </header>
+    <!-- main section -->
+    <main>
+
+        <!-- cart offcanvas -->
+        <div class="cart" id="cart">
+            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><i class='bx bx-cart bx-flip-horizontal'></i>Your Cart</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul id="cart-items" class="list-group mb-3"></ul>
+                  <p>Total: ₹<span id="cart-total">0.00</span></p>
+                  <a class="btn btn-dark text-white" href="#" tabindex="-1" aria-disabled="true">Place Order</a>
+                </div>
+            </div>            
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col">
+                    <img id="product-image" src="/assets/laptop/12.png" alt="..." class="p-3" height="400px" width="400px">
+                    <div class="col-6 ms-5 ps-4">
+                        <button id="add-to-cart-btn" type="button" class="btn btn-dark add">Add to Cart</button>
+                        <button type="button" class="btn btn-dark buy">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="cards" style="width: 48rem;">
+                        <div class="card-body">
+                            <h5 class="card-title" id="product-name">Infinix Y2 series Intel Core i3 11th Gen 1115G4 - (16 GB/512 GB SSD/Windows 11 Home) XL29 Thin and Light Laptop  (15.6 Inch, Blue, 1.8 Kg)</h5>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                                <p>1,621 Ratings & 207 Reviews</p>
+                            </div>
+                            <div>
+                                <p class="card-subtitle mb-2 text-muted">Special price</p>
+                                <h4><span id="product-price">₹26,990 </span><small class="text-decoration-line-through">₹44,990</small> <small>40% off</small></h4>
+                                <p>+ ₹100 Secured packaging Fee</p>
+                            </div>
+                            <dl class="row">
+                                <dt class="col-sm-3"><i class='bx bxl-apple bx-md' style='color:#000000'></i></dt>
+                                <dd class="col-sm-9">
+                                <p>1 Year Warranty for Laptop and 6 Months Warranty for In-Box Accessories</p>
+                                </dd>
+                                <dt class="col-sm-3">System Memory</dt>
+                                <dd class="col-sm-9">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-outline-dark active">4 GB</button>
+                                        <button type="button" class="btn btn-outline-dark">8 GB</button>
+                                    </div>
+                                </dd>
+                                <dt class="col-sm-3">Delivery</dt>
+                                <dd class="col-sm-9">
+                                <p>Faster delivery by 11pm Tomorrow</p>
+                                </dd>
+                                <dt class="col-sm-3">Highlights</dt>
+                                <dd class="col-sm-9">
+                                <ul>
+                                    <li>Stylish & Portable Thin and Light Laptop</li>
+                                    <li>Light Laptop without Optical Disk Drive</li>
+                                    <li>15.6 Inch Full HD Display Anti Glare (260nits peak brightness, , NTSC 60%)</li>
+                                </ul>
+                                </dd>
+                                <dt class="col-sm-3">Easy Payment Options</dt>
+                                <dd class="col-sm-9">
+                                <ul>
+                                    <li>No cost EMI starting from ₹11,834/month</li>
+                                    <li>Net banking & Credit/ Debit/ ATM card</li>
+                                </ul>
+                                </dd>
+                                <dt class="col-sm-3"></dt>
+                                <dd class="col-sm-9">
+                                <ul>
+                                    <li>7 Days Service Center Replacement/Repair</li>
+                                    <li>GST invoice available</li>
+                                </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer section -->
+    <footer class="bd-footer py-5 mt-5 bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="E-Commerce">
+              <span class="fs-5">E-Commerce Shopkaroo</span>
+            </a>
+            <ul class="list-unstyled small text-muted">
+              <li class="mb-2">Designed and built with all the love in the world by the E-Commerce Shopkaroo team with the help of our contributors.</li>
+            </ul>
+            <br>
+            <br>
+            <h5>Payment Partners</h5>
+            <div class="col">
+              <img width="50" height="50" src="https://img.icons8.com/color/50/paytm.png" alt="paytm">
+              <img width="50" height="50" src="https://img.icons8.com/fluency/50/paypal.png" alt="paypal">
+              <img width="50" height="50" src="https://img.icons8.com/color/50/mastercard-logo.png" alt="mastercard-logo">
+              <img width="50" height="50" src="https://img.icons8.com/color/50/google-pay.png" alt="google-pay">
+            </div>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>ABOUT</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Contact Us</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">About Us</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Careers</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Corporate</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Information</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>HELP</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Payments</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Shipping</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Cancellation & Returns</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">FQA</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Report</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Infringement</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>CONSUMER POLICY</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Privacy</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Term Of Use</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Cancellation & Returns</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Security</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Grievance</a></li>
+              <li class="mb-2"><a class="link-dark text-decoration-none" href="#">Redressal</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>ADDRESS</h5>
+            <p><b>Street:</b>  Sri Ganesa Complex,n, 10th Street, Gandhipuram
+            <br><b> City:</b>   Coimbatore
+            <br><b> State/province/area:</b>    Tamil Nadu           
+            <br><b>Phone number:</b>  04222489095             
+            <br><b> Zip code:</b>  641012              
+            <br><b> Country calling code:</b>  +91 1234567891              
+            <br><b> Country:</b>  India</p>
+          </div>
+        </div>
+      </div>
+      <p class="cp">@2024 | All Right Reserved.</p>
+    </footer>
+
+    <!-- JS Script Links -->
+    <!-- Bootstrap CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Boxicon Link -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/script.js"></script>
+</body>
+</html>
